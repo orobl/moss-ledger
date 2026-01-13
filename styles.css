@@ -1,0 +1,212 @@
+/* ---------- Global ---------- */
+
+:root {
+    --bg: #f6f3ee;
+    --card: #fffdf9;
+    --accent: #a3b18a;       /* sage green */
+    --accent-soft: #dde5d6;
+    --accent-dark: #6b8f71;
+    --danger: #c97a7a;
+    --text-main: #3a3a3a;
+    --text-muted: #7a7a7a;
+    --border-soft: #e6e1d8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Georgia", "Times New Roman", serif;
+    background-color: var(--bg);
+    margin: 0;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background: linear-gradient(
+        to bottom,
+        #dbe6d3,
+        #c9d8c1
+    );
+    color: #2f3e2f;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+/* ---------- Layout ---------- */
+
+main {
+    max-width: 520px;
+    margin: 1.25rem auto;
+    padding: 0 1rem 2rem;
+}
+
+/* ---------- Cards / Sections ---------- */
+
+section,
+#details {
+    background: var(--card);
+    padding: 1.25rem;
+    border-radius: 14px;
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    margin-bottom: 1rem;
+}
+
+/* ---------- Add Person ---------- */
+
+.add-person {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.add-person input {
+    border-radius: 999px;
+}
+
+/* ---------- Inputs ---------- */
+
+input,
+textarea {
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    margin-top: 0.25rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+    background-color: #fff;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* ---------- Labels ---------- */
+
+label {
+    display: block;
+    margin-bottom: 0.85rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* ---------- Buttons ---------- */
+
+button {
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    border: none;
+    background-color: var(--accent);
+    color: white;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.05s ease;
+}
+
+button:hover {
+    background-color: var(--accent-dark);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+#backBtn {
+    background-color: #e2ddd3;
+    color: #3a3a3a;
+    margin-bottom: 1rem;
+}
+
+#saveBtn {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.05rem;
+}
+
+#birthdayBtn {
+    width: 100%; 
+    font-size: 1.05rem;
+}
+
+button.danger {
+    width: 100%;
+    background-color: var(--danger);
+    margin-top: 1rem;
+    font-size: 1.05rem;
+}
+
+button.danger:hover {
+    background-color: #b56767;
+}
+
+/* ---------- Search ---------- */
+
+#searchInput {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    border-radius: 999px;
+}
+
+/* ---------- List ---------- */
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background: var(--card);
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.6rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+li:hover {
+    background-color: #f2f0ea;
+}
+
+/* ---------- Overdue State ---------- */
+
+.overdue {
+    border-left: 6px solid var(--danger);
+    background-color: #fbf2f2;
+}
+
+.overdue-label {
+    font-size: 0.7rem;
+    color: var(--danger);
+    margin-left: 0.5rem;
+    font-style: italic;
+}
+
+/* ---------- Utilities ---------- */
+
+.hidden {
+    display: none;
+}
